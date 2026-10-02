@@ -8,7 +8,7 @@
     content="width=device-width, initial-scale=1.0"
   />
 
-  <title>The Problem — InterviewReady</title>
+  <title>Proposed Solution — InterviewReady</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -124,16 +124,16 @@
         class="hidden items-center gap-9 text-sm lg:flex"
       >
         <a
-          href="#"
-          class="font-medium text-accent"
-          aria-current="page"
+          href="problem.html"
+          class="transition-colors hover:text-accent"
         >
           The Problem
         </a>
 
         <a
-          href="solution.html"
-          class="transition-colors hover:text-accent"
+          href="#"
+          class="font-medium text-accent"
+          aria-current="page"
         >
           Proposed Solution
         </a>
@@ -188,8 +188,8 @@
     >
       <div class="flex flex-col gap-4 text-sm">
         <a href="index.html">Home</a>
-        <a href="#" class="font-medium text-accent" aria-current="page">The Problem</a>
-        <a href="solution.html">Proposed Solution</a>
+        <a href="problem.html">The Problem</a>
+        <a href="#" class="font-medium text-accent" aria-current="page">Proposed Solution</a>
         <a href="index.html#benefits">Benefits</a>
         <a href="index.html#waitlist" class="text-accent">Waitlist Info →</a>
       </div>
@@ -217,7 +217,7 @@
                  tracking-[0.18em] text-accent"
         >
           <span class="h-px w-8 bg-accent"></span>
-          01 / The Problem
+          02 / Proposed Solution
         </div>
 
 
@@ -227,9 +227,9 @@
                    leading-[1.08] tracking-[-.025em]
                    sm:text-5xl lg:text-6xl xl:text-7xl"
           >
-            You can study interview questions for weeks
-            and still struggle when someone actually
-            <span class="italic text-accent">asks you one.</span>
+            A place to rehearse the conversation,
+            not just memorize the
+            <span class="italic text-accent">answer.</span>
           </h1>
         </div>
 
@@ -240,110 +240,108 @@
 
 
     <!-- ======================================================
-         DETAILED PERSPECTIVE
+         CORE PROPOSAL / DUAL-COLUMN CONCEPT
     ======================================================= -->
 
     <section class="border-b border-black/15">
 
       <div
         class="mx-auto grid max-w-[1600px]
-               lg:grid-cols-[1.08fr_.92fr]"
+               lg:grid-cols-[.85fr_1.15fr]"
       >
 
-        <!-- Left Column: Primary Obstacles -->
+        <!-- Orange Grid Card: "The Idea" -->
 
         <div
-          class="flex flex-col justify-center px-5 py-16
-                  sm:px-8 sm:py-20
-                  lg:px-12 lg:py-24"
+          class="reference-grid flex min-h-[420px] items-end
+                 p-6 sm:p-10 lg:min-h-[640px] lg:p-14"
         >
 
-          <div class="reveal space-y-12">
+          <div
+            class="reveal max-w-md bg-paper p-8 shadow-[0_18px_50px_rgba(0,0,0,.15)]"
+          >
+            <p
+              class="text-xs uppercase tracking-[.18em]
+                     text-accent"
+            >
+              The idea
+            </p>
 
-            <div>
-              <p
-                class="text-xs uppercase tracking-[.18em] text-accent"
-              >
-                Knowledge vs. Articulation
-              </p>
-
-              <p
-                class="mt-4 max-w-xl text-lg leading-8 text-muted sm:text-xl"
-              >
-                Reading answers and revising technical concepts can
-                help with knowledge, but an interview also asks you
-                to explain that knowledge clearly and respond in
-                the moment.
-              </p>
-            </div>
-
-
-            <div class="h-px bg-black/10"></div>
-
-
-            <div>
-              <p
-                class="text-xs uppercase tracking-[.18em] text-accent"
-              >
-                Solo Preparation
-              </p>
-
-              <p
-                class="mt-4 max-w-xl text-lg leading-8 text-muted sm:text-xl"
-              >
-                Getting repeated interview-style practice with
-                useful feedback can be difficult—especially when
-                you're preparing on your own.
-              </p>
-            </div>
-
+            <p
+              class="mt-6 font-display text-3xl leading-tight
+                     sm:text-4xl"
+            >
+              Don't just collect more interview questions.
+              Practice answering them.
+            </p>
           </div>
 
         </div>
 
 
 
-        <!-- Right Column: Visual Contrast Card -->
+        <!-- Right Column: Proposal Explanation -->
 
         <div
-          class="reference-grid flex items-center justify-center
-                 border-t border-black/15 p-5
-                 sm:p-8
-                 lg:border-l lg:border-t-0 lg:p-12"
+          class="flex flex-col justify-center border-t border-black/15
+                 px-5 py-16
+                 sm:px-8 sm:py-20
+                 lg:border-l lg:border-t-0 lg:px-16"
         >
 
-          <div class="reveal w-full max-w-[560px]">
+          <div class="reveal max-w-2xl space-y-10">
 
             <div
-              class="rounded-[22px] border border-black/10
-                     bg-[#fbfaf7] p-6 shadow-[0_18px_50px_rgba(0,0,0,.12)]
-                     sm:p-8"
+              class="border-l-2 border-accent pl-6
+                     sm:pl-8"
             >
-
               <p
-                class="text-[10px] uppercase tracking-[.15em] text-muted"
+                class="font-display text-2xl leading-snug
+                       sm:text-3xl"
               >
-                The Core Dilemma
+                InterviewReady proposes using AI to simulate
+                interview-style questions and help students
+                identify areas they may want to improve.
+              </p>
+            </div>
+
+
+            <p
+              class="text-base leading-8 text-muted
+                     sm:text-lg"
+            >
+              The concept is designed around practice: answer a
+              question, review feedback, reconsider your response,
+              and try again before the interview that actually
+              counts.
+            </p>
+
+
+            <div
+              class="rounded-[18px] border border-black/10 bg-[#fbfaf7] p-6"
+            >
+              <p class="text-xs uppercase tracking-[.16em] text-accent">
+                Rehearsal Loop
               </p>
 
-              <p
-                class="mt-4 font-display text-2xl leading-snug sm:text-3xl"
-              >
-                “You can study interview questions for weeks and still struggle when someone actually asks you one.”
-              </p>
-
-              <div class="my-6 h-px bg-black/10"></div>
-
-              <div class="space-y-4 text-sm leading-relaxed text-muted">
-                <p>
-                  Reading answers and revising technical concepts can help with knowledge, but an interview also asks you to explain that knowledge clearly and respond in the moment.
-                </p>
-
-                <p>
-                  Getting repeated interview-style practice with useful feedback can be difficult—especially when you're preparing on your own.
-                </p>
+              <div class="mt-4 grid grid-cols-2 gap-4 text-sm sm:grid-cols-4">
+                <div class="border-t border-black/10 pt-3">
+                  <p class="font-bold text-ink">01. Answer</p>
+                  <p class="mt-1 text-xs text-muted">Respond in real time</p>
+                </div>
+                <div class="border-t border-black/10 pt-3">
+                  <p class="font-bold text-ink">02. Review</p>
+                  <p class="mt-1 text-xs text-muted">Analyze feedback</p>
+                </div>
+                <div class="border-t border-black/10 pt-3">
+                  <p class="font-bold text-ink">03. Reconsider</p>
+                  <p class="mt-1 text-xs text-muted">Reflect & refine</p>
+                </div>
+                <div class="border-t border-black/10 pt-3">
+                  <p class="font-bold text-ink">04. Try Again</p>
+                  <p class="mt-1 text-xs text-muted">Repeat before it counts</p>
+                </div>
               </div>
-
             </div>
 
           </div>
@@ -375,18 +373,18 @@
           </p>
 
           <h2 class="mt-2 font-display text-2xl sm:text-3xl">
-            See the Proposed Solution
+            Explore the Benefits
           </h2>
         </div>
 
 
         <a
-          href="solution.html"
+          href="index.html#benefits"
           class="group inline-flex items-center gap-8
                  bg-accent px-6 py-4 text-sm font-medium text-white
                  transition hover:bg-black"
         >
-          Explore proposed solution
+          Explore benefits
 
           <span
             class="transition-transform group-hover:translate-x-1"
@@ -450,7 +448,7 @@
 
             <div class="mt-5 flex flex-col gap-3 text-white/70">
               <a href="index.html">Home</a>
-              <a href="#">Problem</a>
+              <a href="problem.html">Problem</a>
               <a href="index.html#benefits">Benefits</a>
             </div>
           </div>
@@ -462,7 +460,7 @@
             </p>
 
             <div class="mt-5 flex flex-col gap-3 text-white/70">
-              <a href="solution.html">Concept</a>
+              <a href="#">Concept</a>
               <a href="index.html#waitlist">Waitlist info</a>
             </div>
           </div>
