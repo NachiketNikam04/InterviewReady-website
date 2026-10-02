@@ -8,7 +8,7 @@
     content="width=device-width, initial-scale=1.0"
   />
 
-  <title>The Problem — InterviewReady</title>
+  <title>Benefits — InterviewReady</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -124,9 +124,8 @@
         class="hidden items-center gap-9 text-sm lg:flex"
       >
         <a
-          href="#"
-          class="font-medium text-accent"
-          aria-current="page"
+          href="problem.html"
+          class="transition-colors hover:text-accent"
         >
           The Problem
         </a>
@@ -139,8 +138,9 @@
         </a>
 
         <a
-          href="benefits.html"
-          class="transition-colors hover:text-accent"
+          href="#"
+          class="font-medium text-accent"
+          aria-current="page"
         >
           Benefits
         </a>
@@ -188,9 +188,9 @@
     >
       <div class="flex flex-col gap-4 text-sm">
         <a href="index.html">Home</a>
-        <a href="#" class="font-medium text-accent" aria-current="page">The Problem</a>
+        <a href="problem.html">The Problem</a>
         <a href="solution.html">Proposed Solution</a>
-        <a href="benefits.html">Benefits</a>
+        <a href="#" class="font-medium text-accent" aria-current="page">Benefits</a>
         <a href="index.html#waitlist" class="text-accent">Waitlist Info →</a>
       </div>
     </div>
@@ -204,7 +204,7 @@
          PAGE HERO / MAIN STATEMENT
     ======================================================= -->
 
-    <section class="border-b border-black/15">
+    <section class="dark-grid border-b border-white/15 bg-[#111111] text-white">
 
       <div
         class="mx-auto max-w-[1600px] px-5 py-16
@@ -214,22 +214,20 @@
 
         <div
           class="mb-8 flex items-center gap-3 text-xs uppercase
-                 tracking-[0.18em] text-accent"
+                 tracking-[0.18em] text-[#ff8054]"
         >
-          <span class="h-px w-8 bg-accent"></span>
-          01 / The Problem
+          <span class="h-px w-8 bg-[#ff8054]"></span>
+          03 / What it could help with
         </div>
 
 
-        <div class="reveal">
+        <div class="reveal max-w-5xl">
           <h1
-            class="max-w-5xl font-display text-4xl
-                   leading-[1.08] tracking-[-.025em]
+            class="font-display text-4xl leading-[1.05] tracking-[-.025em]
                    sm:text-5xl lg:text-6xl xl:text-7xl"
           >
-            You can study interview questions for weeks
-            and still struggle when someone actually
-            <span class="italic text-accent">asks you one.</span>
+            Three reasons to practice before the
+            <span class="italic text-[#ff8054]">real conversation.</span>
           </h1>
         </div>
 
@@ -240,113 +238,142 @@
 
 
     <!-- ======================================================
-         DETAILED PERSPECTIVE
+         THREE BENEFIT COLUMNS
     ======================================================= -->
 
-    <section class="border-b border-black/15">
+    <section class="dark-grid bg-[#111111] text-white">
 
       <div
-        class="mx-auto grid max-w-[1600px]
-               lg:grid-cols-[1.08fr_.92fr]"
+        class="mx-auto max-w-[1600px] px-5 py-20
+               sm:px-8 sm:py-28
+               lg:px-12 lg:py-32"
       >
 
-        <!-- Left Column: Primary Obstacles -->
+        <div class="grid md:grid-cols-3">
 
-        <div
-          class="flex flex-col justify-center px-5 py-16
-                  sm:px-8 sm:py-20
-                  lg:px-12 lg:py-24"
-        >
+          <!-- Benefit 01 -->
 
-          <div class="reveal space-y-12">
+          <article
+            class="reveal border-b border-white/20 py-12
+                   md:border-b-0 md:border-r md:px-8
+                   md:first:pl-0"
+          >
 
-            <div>
-              <p
-                class="text-xs uppercase tracking-[.18em] text-accent"
-              >
-                Knowledge vs. Articulation
-              </p>
-
-              <p
-                class="mt-4 max-w-xl text-lg leading-8 text-muted sm:text-xl"
-              >
-                Reading answers and revising technical concepts can
-                help with knowledge, but an interview also asks you
-                to explain that knowledge clearly and respond in
-                the moment.
-              </p>
-            </div>
-
-
-            <div class="h-px bg-black/10"></div>
-
-
-            <div>
-              <p
-                class="text-xs uppercase tracking-[.18em] text-accent"
-              >
-                Solo Preparation
-              </p>
-
-              <p
-                class="mt-4 max-w-xl text-lg leading-8 text-muted sm:text-xl"
-              >
-                Getting repeated interview-style practice with
-                useful feedback can be difficult—especially when
-                you're preparing on your own.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- Right Column: Visual Contrast Card -->
-
-        <div
-          class="reference-grid flex items-center justify-center
-                 border-t border-black/15 p-5
-                 sm:p-8
-                 lg:border-l lg:border-t-0 lg:p-12"
-        >
-
-          <div class="reveal w-full max-w-[560px]">
-
-            <div
-              class="rounded-[22px] border border-black/10
-                     bg-[#fbfaf7] p-6 shadow-[0_18px_50px_rgba(0,0,0,.12)]
-                     sm:p-8"
+            <span
+              class="flex h-12 w-12 items-center justify-center
+                     bg-[#3a173d] text-[#f04cff]"
             >
+              01
+            </span>
 
-              <p
-                class="text-[10px] uppercase tracking-[.15em] text-muted"
-              >
-                The Core Dilemma
-              </p>
 
-              <p
-                class="mt-4 font-display text-2xl leading-snug sm:text-3xl"
-              >
-                “You can study interview questions for weeks and still struggle when someone actually asks you one.”
-              </p>
+            <p
+              class="mt-10 text-xs uppercase tracking-[.16em]
+                     text-[#ff8054]"
+            >
+              Practice
+            </p>
 
-              <div class="my-6 h-px bg-black/10"></div>
 
-              <div class="space-y-4 text-sm leading-relaxed text-muted">
-                <p>
-                  Reading answers and revising technical concepts can help with knowledge, but an interview also asks you to explain that knowledge clearly and respond in the moment.
-                </p>
+            <h2
+              class="mt-4 font-display text-3xl leading-tight sm:text-4xl"
+            >
+              Rehearse realistic questions.
+            </h2>
 
-                <p>
-                  Getting repeated interview-style practice with useful feedback can be difficult—especially when you're preparing on your own.
-                </p>
-              </div>
 
-            </div>
+            <p
+              class="mt-5 max-w-sm text-base leading-7 text-white/55"
+            >
+              Move beyond reading question lists by practicing
+              how you would actually explain an answer in an
+              interview-style setting.
+            </p>
 
-          </div>
+          </article>
+
+
+
+          <!-- Benefit 02 -->
+
+          <article
+            class="reveal border-b border-white/20 py-12
+                   md:border-b-0 md:border-r md:px-8"
+          >
+
+            <span
+              class="flex h-12 w-12 items-center justify-center
+                     bg-[#153b37] text-[#49cbb6]"
+            >
+              02
+            </span>
+
+
+            <p
+              class="mt-10 text-xs uppercase tracking-[.16em]
+                     text-[#ff8054]"
+            >
+              Reflect
+            </p>
+
+
+            <h2
+              class="mt-4 font-display text-3xl leading-tight sm:text-4xl"
+            >
+              Notice where answers need work.
+            </h2>
+
+
+            <p
+              class="mt-5 max-w-sm text-base leading-7 text-white/55"
+            >
+              Use proposed feedback to spot areas worth revisiting,
+              such as clarity, structure, technical explanation,
+              or incomplete reasoning.
+            </p>
+
+          </article>
+
+
+
+          <!-- Benefit 03 -->
+
+          <article
+            class="reveal py-12 md:px-8 md:last:pr-0"
+          >
+
+            <span
+              class="flex h-12 w-12 items-center justify-center
+                     bg-[#40261c] text-[#ff8054]"
+            >
+              03
+            </span>
+
+
+            <p
+              class="mt-10 text-xs uppercase tracking-[.16em]
+                     text-[#ff8054]"
+            >
+              Repeat
+            </p>
+
+
+            <h2
+              class="mt-4 font-display text-3xl leading-tight sm:text-4xl"
+            >
+              Try the answer again.
+            </h2>
+
+
+            <p
+              class="mt-5 max-w-sm text-base leading-7 text-white/55"
+            >
+              Revisit questions after reflection so that improvement
+              comes from repeated practice rather than memorizing a
+              perfect script.
+            </p>
+
+          </article>
 
         </div>
 
@@ -375,18 +402,18 @@
           </p>
 
           <h2 class="mt-2 font-display text-2xl sm:text-3xl">
-            See the Proposed Solution
+            Interested in Early Access?
           </h2>
         </div>
 
 
         <a
-          href="solution.html"
+          href="index.html#waitlist"
           class="group inline-flex items-center gap-8
                  bg-accent px-6 py-4 text-sm font-medium text-white
                  transition hover:bg-black"
         >
-          Explore proposed solution
+          Waitlist information
 
           <span
             class="transition-transform group-hover:translate-x-1"
@@ -450,8 +477,8 @@
 
             <div class="mt-5 flex flex-col gap-3 text-white/70">
               <a href="index.html">Home</a>
-              <a href="#">Problem</a>
-              <a href="benefits.html">Benefits</a>
+              <a href="problem.html">Problem</a>
+              <a href="#">Benefits</a>
             </div>
           </div>
 
