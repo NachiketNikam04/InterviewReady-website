@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>InterviewReady — Practice Before the Real Interview</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#111111",
+            paper: "#F7F6F2",
+            accent: "#F36C3D",
+            muted: "#6F6F6B",
+          },
+
+          fontFamily: {
+            display: ["Georgia", "Times New Roman", "serif"],
+            sans: ["Arial", "Helvetica", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Grid treatment inspired by the reference video */
+    .reference-grid {
+      background-color: #f47b52;
+      background-image:
+        linear-gradient(rgba(255,255,255,.22) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.22) 1px, transparent 1px);
+
+      background-size: 32px 32px;
+    }
+
+    .dark-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+
+      background-size: 40px 40px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        opacity 700ms ease,
+        transform 700ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+
+<body class="bg-paper font-sans text-ink antialiased">
+
+  <!-- ======================================================
+       NAVIGATION
+  ======================================================= -->
+
+  <header class="border-b border-black/15 bg-paper">
+    <nav
+      class="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-5
+              sm:px-8 lg:px-12"
+      aria-label="Main navigation"
+    >
+
+      <!-- Brand -->
+      <a href="#top" class="flex items-center gap-3">
+        <span
+          class="grid h-9 w-9 grid-cols-2 overflow-hidden bg-accent"
+          aria-hidden="true"
+        >
+          <span class="border-b border-r border-white/70"></span>
+          <span></span>
+          <span></span>
+          <span class="rounded-tl-full bg-paper"></span>
+        </span>
+
+        <span class="font-display text-xl font-bold sm:text-2xl">
+          InterviewReady
+        </span>
+      </a>
+
+
+      <!-- Desktop nav -->
+      <div
+        class="hidden items-center gap-9 text-sm lg:flex"
+      >
+        <a
+          href="#problem"
+          class="transition-colors hover:text-accent"
+        >
+          The Problem
+        </a>
+
+        <a
+          href="#solution"
+          class="transition-colors hover:text-accent"
+        >
+          Proposed Solution
+        </a>
+
+        <a
+          href="#benefits"
+          class="transition-colors hover:text-accent"
+        >
+          Benefits
+        </a>
+      </div>
+
+
+      <!-- Desktop CTA -->
+      <a
+        href="#waitlist"
+        class="hidden border border-black/25 px-6 py-3 text-sm
+                transition hover:border-accent hover:bg-accent hover:text-white
+                sm:inline-flex"
+      >
+        Waitlist Info
+      </a>
+
+
+      <!-- Mobile menu -->
+      <button
+        id="menuButton"
+        class="border border-black/20 p-2.5 sm:hidden"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        >
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+
+    </nav>
+
+
+    <!-- Mobile menu -->
+
+    <div
+      id="mobileMenu"
+      class="hidden border-t border-black/10 px-5 py-5 sm:hidden"
+    >
+      <div class="flex flex-col gap-4 text-sm">
+        <a href="#problem">The Problem</a>
+        <a href="#solution">Proposed Solution</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#waitlist" class="text-accent">Waitlist Info →</a>
+      </div>
+    </div>
+  </header>
+
+
+
+  <main id="top">
+
+    <!-- ======================================================
+         HERO
+    ======================================================= -->
+
+    <section class="border-b border-black/15">
+
+      <div
+        class="mx-auto grid max-w-[1600px]
+               lg:min-h-[760px] lg:grid-cols-[1.08fr_.92fr]"
+      >
+
+        <!-- LEFT -->
+
+        <div
+          class="flex flex-col justify-center px-5 py-16
+                  sm:px-8 sm:py-24
+                  lg:px-12 lg:py-28"
+        >
+
+          <div
+            class="mb-8 flex items-center gap-3 text-xs uppercase
+                   tracking-[0.18em] text-muted"
+          >
+            <span class="h-px w-8 bg-accent"></span>
+            For final-year students
+          </div>
+
+
+          <h1
+            class="max-w-[900px] font-display text-[3rem]
+                   leading-[0.98] tracking-[-0.035em]
+                   sm:text-[4.8rem]
+                   lg:text-[5.7rem]
+                   xl:text-[6.5rem]"
+          >
+            Your first real
+            interview shouldn't
+            feel like your
+            <span class="italic text-accent">first practice.</span>
+          </h1>
+
+
+          <p
+            class="mt-8 max-w-xl text-base leading-7 text-muted
+                   sm:text-lg"
+          >
+            InterviewReady is a proposed AI interview-practice
+            tool designed to help final-year students rehearse
+            realistic questions, reflect on their answers, and
+            prepare more deliberately before a real interview.
+          </p>
+
+
+          <div class="mt-10">
+            <a
+              href="#waitlist"
+              class="group inline-flex items-center gap-8
+                     bg-accent px-6 py-4 text-sm font-medium text-white
+                     transition hover:bg-black"
+            >
+              Learn about the waitlist
+
+              <span
+                class="transition-transform group-hover:translate-x-1"
+                aria-hidden="true"
+              >
+                →
+              </span>
+            </a>
+          </div>
+
+        </div>
+
+
+
+        <!-- RIGHT / PRODUCT CONCEPT -->
+
+        <div
+          class="reference-grid flex items-center justify-center
+                 border-t border-black/15 p-5
+                 sm:p-8
+                 lg:border-l lg:border-t-0 lg:p-10"
+        >
+
+          <div class="w-full max-w-[650px]">
+
+            <!-- Interview card -->
+
+            <div
+              class="rounded-[22px] border border-black/10
+                     bg-[#fbfaf7] p-5 shadow-[0_18px_50px_rgba(0,0,0,.12)]
+                     sm:p-7"
+            >
+
+              <div class="flex items-start justify-between gap-4">
+
+                <div>
+                  <p
+                    class="text-[10px] uppercase tracking-[.15em]
+                           text-muted"
+                  >
+                    Practice interview
+                  </p>
+
+                  <h2
+                    class="mt-2 font-display text-2xl sm:text-3xl"
+                  >
+                    Software Developer
+                  </h2>
+                </div>
+
+
+                <div
+                  class="flex items-center gap-2 rounded-full
+                         border border-black/10 px-3 py-2 text-[11px]"
+                >
+                  <span
+                    class="h-2 w-2 rounded-full bg-accent"
+                  ></span>
+
+                  Session
+                </div>
+
+              </div>
+
+
+              <div class="my-6 h-px bg-black/10"></div>
+
+
+              <div class="flex gap-4">
+
+                <div
+                  class="flex h-10 w-10 shrink-0 items-center
+                         justify-center rounded-full bg-black text-xs
+                         font-bold text-white"
+                >
+                  AI
+                </div>
+
+
+                <div>
+                  <p class="text-xs text-muted">
+                    Interviewer
+                  </p>
+
+                  <p
+                    class="mt-2 font-display text-xl leading-snug
+                           sm:text-2xl"
+                  >
+                    “Tell me about a project where something
+                    didn't work as expected. What did you do next?”
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div
+                class="mt-8 border border-black/10 bg-white p-4"
+              >
+                <p
+                  class="text-[10px] uppercase tracking-[.15em]
+                         text-muted"
+                >
+                  Your response
+                </p>
+
+                <div
+                  class="mt-3 flex items-center justify-between gap-4"
+                >
+                  <p class="text-sm text-muted">
+                    Speak through your approach...
+                  </p>
+
+                  <div
+                    class="flex h-10 w-10 shrink-0 items-center
+                           justify-center rounded-full bg-accent text-white"
+                  >
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                    >
+                      <rect x="9" y="3" width="6" height="11" rx="3"/>
+                      <path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+
+            <!-- Bottom cards -->
+
+            <div
+              class="mt-5 grid grid-cols-2 gap-5"
+            >
+
+              <div
+                class="rounded-[18px] border border-black/10
+                       bg-[#fbfaf7] p-5"
+              >
+                <p
+                  class="text-[10px] uppercase tracking-[.12em]
+                         text-muted"
+                >
+                  Focus
+                </p>
+
+                <p class="mt-3 font-display text-xl sm:text-2xl">
+                  Clearer answers
+                </p>
+              </div>
+
+
+              <div
+                class="rounded-[18px] bg-black p-5 text-white"
+              >
+                <p
+                  class="text-[10px] uppercase tracking-[.12em]
+                         text-white/50"
+                >
+                  Goal
+                </p>
+
+                <p class="mt-3 font-display text-xl sm:text-2xl">
+                  Better practice
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         PROBLEM
+    ======================================================= -->
+
+    <section
+      id="problem"
+      class="border-b border-black/15"
+    >
+
+      <div
+        class="mx-auto max-w-[1600px] px-5 py-20
+               sm:px-8 sm:py-28
+               lg:px-12 lg:py-36"
+      >
+
+        <div
+          class="grid gap-12
+                 lg:grid-cols-[.65fr_1.35fr] lg:gap-24"
+        >
+
+          <div>
+            <p
+              class="text-xs uppercase tracking-[.18em] text-accent"
+            >
+              01 / The problem
+            </p>
+          </div>
+
+
+          <div class="reveal">
+
+            <h2
+              class="max-w-5xl font-display text-4xl
+                     leading-[1.08] tracking-[-.025em]
+                     sm:text-5xl lg:text-6xl"
+            >
+              You can study interview questions for weeks
+              and still struggle when someone actually
+              <span class="italic">asks you one.</span>
+            </h2>
+
+
+            <div
+              class="mt-12 grid gap-8 border-t border-black/15
+                     pt-8 md:grid-cols-2"
+            >
+
+              <p class="text-base leading-7 text-muted">
+                Reading answers and revising technical concepts can
+                help with knowledge, but an interview also asks you
+                to explain that knowledge clearly and respond in
+                the moment.
+              </p>
+
+
+              <p class="text-base leading-7 text-muted">
+                Getting repeated interview-style practice with
+                useful feedback can be difficult—especially when
+                you're preparing on your own.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         SOLUTION STATEMENT
+    ======================================================= -->
+
+    <section
+      id="solution"
+      class="border-b border-black/15"
+    >
+
+      <div
+        class="mx-auto grid max-w-[1600px]
+               lg:grid-cols-[.8fr_1.2fr]"
+      >
+
+        <!-- Orange statement -->
+
+        <div
+          class="reference-grid flex min-h-[420px] items-end
+                 p-5 sm:p-8 lg:min-h-[650px] lg:p-12"
+        >
+
+          <div
+            class="max-w-lg bg-paper p-6
+                   sm:p-8"
+          >
+            <p
+              class="text-xs uppercase tracking-[.18em]
+                     text-accent"
+            >
+              The idea
+            </p>
+
+            <p
+              class="mt-6 font-display text-3xl leading-tight
+                     sm:text-4xl"
+            >
+              Don't just collect more interview questions.
+              Practice answering them.
+            </p>
+          </div>
+
+        </div>
+
+
+
+        <!-- Explanation -->
+
+        <div
+          class="flex items-center border-t border-black/15
+                 px-5 py-20
+                 sm:px-8 sm:py-24
+                 lg:border-l lg:border-t-0 lg:px-16"
+        >
+
+          <div class="reveal max-w-3xl">
+
+            <p
+              class="text-xs uppercase tracking-[.18em]
+                     text-accent"
+            >
+              02 / Proposed solution
+            </p>
+
+
+            <h2
+              class="mt-7 font-display text-4xl leading-[1.1]
+                     tracking-[-.025em]
+                     sm:text-5xl lg:text-6xl"
+            >
+              A place to rehearse the conversation,
+              not just memorize the answer.
+            </h2>
+
+
+            <div
+              class="mt-10 border-l-2 border-accent pl-6
+                     sm:pl-8"
+            >
+              <p
+                class="font-display text-2xl leading-snug
+                       sm:text-3xl"
+              >
+                InterviewReady proposes using AI to simulate
+                interview-style questions and help students
+                identify areas they may want to improve.
+              </p>
+            </div>
+
+
+            <p
+              class="mt-10 max-w-2xl text-base leading-7 text-muted"
+            >
+              The concept is designed around practice: answer a
+              question, review feedback, reconsider your response,
+              and try again before the interview that actually
+              counts.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         THREE BENEFITS
+    ======================================================= -->
+
+    <section
+      id="benefits"
+      class="dark-grid bg-[#111111] text-white"
+    >
+
+      <div
+        class="mx-auto max-w-[1600px] px-5 py-20
+               sm:px-8 sm:py-28
+               lg:px-12 lg:py-32"
+      >
+
+        <div
+          class="grid gap-8 border-b border-white/20 pb-14
+                 lg:grid-cols-2"
+        >
+
+          <div>
+            <p
+              class="text-xs uppercase tracking-[.18em]
+                     text-[#ff8054]"
+            >
+              03 / What it could help with
+            </p>
+          </div>
+
+
+          <h2
+            class="font-display text-4xl leading-tight
+                   sm:text-5xl lg:text-6xl"
+          >
+            Three reasons to practice before the real conversation.
+          </h2>
+
+        </div>
+
+
+
+        <div
+          class="grid md:grid-cols-3"
+        >
+
+          <!-- Benefit 01 -->
+
+          <article
+            class="reveal border-b border-white/20 py-10
+                   md:border-b-0 md:border-r md:px-8
+                   md:first:pl-0"
+          >
+
+            <span
+              class="flex h-12 w-12 items-center justify-center
+                     bg-[#3a173d] text-[#f04cff]"
+            >
+              01
+            </span>
+
+
+            <p
+              class="mt-10 text-xs uppercase tracking-[.16em]
+                     text-[#ff8054]"
+            >
+              Practice
+            </p>
+
+
+            <h3
+              class="mt-4 font-display text-3xl leading-tight"
+            >
+              Rehearse realistic questions.
+            </h3>
+
+
+            <p
+              class="mt-5 max-w-sm leading-7 text-white/55"
+            >
+              Move beyond reading question lists by practicing
+              how you would actually explain an answer in an
+              interview-style setting.
+            </p>
+
+          </article>
+
+
+
+          <!-- Benefit 02 -->
+
+          <article
+            class="reveal border-b border-white/20 py-10
+                   md:border-b-0 md:border-r md:px-8"
+          >
+
+            <span
+              class="flex h-12 w-12 items-center justify-center
+                     bg-[#153b37] text-[#49cbb6]"
+            >
+              02
+            </span>
+
+
+            <p
+              class="mt-10 text-xs uppercase tracking-[.16em]
+                     text-[#ff8054]"
+            >
+              Reflect
+            </p>
+
+
+            <h3
+              class="mt-4 font-display text-3xl leading-tight"
+            >
+              Notice where answers need work.
+            </h3>
+
+
+            <p
+              class="mt-5 max-w-sm leading-7 text-white/55"
+            >
+              Use proposed feedback to spot areas worth revisiting,
+              such as clarity, structure, technical explanation,
+              or incomplete reasoning.
+            </p>
+
+          </article>
+
+
+
+          <!-- Benefit 03 -->
+
+          <article
+            class="reveal py-10 md:px-8 md:last:pr-0"
+          >
+
+            <span
+              class="flex h-12 w-12 items-center justify-center
+                     bg-[#40261c] text-[#ff8054]"
+            >
+              03
+            </span>
+
+
+            <p
+              class="mt-10 text-xs uppercase tracking-[.16em]
+                     text-[#ff8054]"
+            >
+              Repeat
+            </p>
+
+
+            <h3
+              class="mt-4 font-display text-3xl leading-tight"
+            >
+              Try the answer again.
+            </h3>
+
+
+            <p
+              class="mt-5 max-w-sm leading-7 text-white/55"
+            >
+              Revisit questions after reflection so that improvement
+              comes from repeated practice rather than memorizing a
+              perfect script.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         WAITLIST INFORMATION
+    ======================================================= -->
+
+    <section
+      id="waitlist"
+      class="border-b border-black/15 bg-[#F36C3D]"
+    >
+
+      <div
+        class="mx-auto max-w-[1600px] px-5 py-20
+               sm:px-8 sm:py-28
+               lg:px-12 lg:py-36"
+      >
+
+        <div
+          class="grid gap-12
+                 lg:grid-cols-[1.25fr_.75fr] lg:items-end"
+        >
+
+          <div class="reveal">
+
+            <p
+              class="text-xs uppercase tracking-[.18em]
+                     text-black/60"
+            >
+              Waitlist information
+            </p>
+
+
+            <h2
+              class="mt-6 max-w-4xl font-display
+                     text-5xl leading-[.98] tracking-[-.03em]
+                     sm:text-6xl lg:text-7xl"
+            >
+              Interested in practicing before InterviewReady launches?
+            </h2>
+
+          </div>
+
+
+
+          <div
+            class="border-l border-black/25 pl-6
+                   sm:pl-8"
+          >
+
+            <p class="text-base leading-7 text-black/70">
+              InterviewReady is currently presented here as a
+              product concept. A future waitlist could be used to
+              share development updates or information about early
+              testing.
+            </p>
+
+
+            <p class="mt-6 text-sm font-medium">
+              No email addresses or registrations are being
+              collected on this page.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- ======================================================
+       FOOTER
+  ======================================================= -->
+
+  <footer
+    class="overflow-hidden bg-[#0d0c12] text-white"
+  >
+
+    <div
+      class="mx-auto max-w-[1600px] px-5 pt-16
+             sm:px-8 sm:pt-20
+             lg:px-12"
+    >
+
+      <div
+        class="grid gap-12
+               md:grid-cols-[1.4fr_.6fr]"
+      >
+
+        <div>
+          <p
+            class="font-display text-3xl sm:text-4xl"
+          >
+            InterviewReady
+          </p>
+
+          <p
+            class="mt-4 max-w-md text-sm leading-6 text-white/50"
+          >
+            A proposed interview-practice experience for
+            final-year students.
+          </p>
+        </div>
+
+
+        <div
+          class="grid grid-cols-2 gap-8 text-sm"
+        >
+
+          <div>
+            <p class="font-display text-lg text-white/60">
+              Page
+            </p>
+
+            <div class="mt-5 flex flex-col gap-3 text-white/70">
+              <a href="#top">Home</a>
+              <a href="#problem">Problem</a>
+              <a href="#benefits">Benefits</a>
+            </div>
+          </div>
+
+
+          <div>
+            <p class="font-display text-lg text-white/60">
+              Project
+            </p>
+
+            <div class="mt-5 flex flex-col gap-3 text-white/70">
+              <a href="#solution">Concept</a>
+              <a href="#waitlist">Waitlist info</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Huge reference-style footer wordmark -->
+
+      <div
+        class="mt-20 whitespace-nowrap font-display
+               text-[18vw] leading-[.78]
+               tracking-[-.06em] text-transparent"
+        style="-webkit-text-stroke: 1px rgba(255,255,255,.35);"
+        aria-hidden="true"
+      >
+        InterviewReady
+      </div>
+
+
+      <div
+        class="mt-12 flex flex-col gap-3 border-t border-white/15
+               py-7 text-xs text-white/45
+               sm:flex-row sm:items-center sm:justify-between"
+      >
+        <p>
+          © 2026 InterviewReady
+        </p>
+
+        <p>
+          First-version concept landing page
+        </p>
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- ======================================================
+       MINIMAL JAVASCRIPT
+  ======================================================= -->
+
+  <script>
+    // Mobile navigation
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", () => {
+      const opening = mobileMenu.classList.contains("hidden");
+
+      mobileMenu.classList.toggle("hidden");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        opening ? "true" : "false"
+      );
+    });
+
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+
+
+    // Small reveal effect inspired by the motion in the reference.
+    // Content remains fully usable without it.
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+      }
+    );
+
+    revealElements.forEach((element) => {
+      observer.observe(element);
+    });
+  </script>
+
+</body>
+</html>
