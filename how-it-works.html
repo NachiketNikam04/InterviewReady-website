@@ -8,7 +8,7 @@
     content="width=device-width, initial-scale=1.0"
   />
 
-  <title>Benefits — InterviewReady</title>
+  <title>How it Works — InterviewReady</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -145,16 +145,16 @@
         </a>
 
         <a
-          href="how-it-works.html"
-          class="transition-colors hover:text-accent"
+          href="#"
+          class="font-medium text-accent"
+          aria-current="page"
         >
           How it Works
         </a>
 
         <a
-          href="#"
-          class="font-medium text-accent"
-          aria-current="page"
+          href="benefits.html"
+          class="transition-colors hover:text-accent"
         >
           Benefits
         </a>
@@ -204,8 +204,8 @@
         <a href="index.html">Home</a>
         <a href="problem.html">The Problem</a>
         <a href="solution.html">Proposed Solution</a>
-        <a href="how-it-works.html">How it Works</a>
-        <a href="#" class="font-medium text-accent" aria-current="page">Benefits</a>
+        <a href="#" class="font-medium text-accent" aria-current="page">How it Works</a>
+        <a href="benefits.html">Benefits</a>
         <a href="waitlist.html" class="text-accent">Waitlist Info →</a>
       </div>
     </div>
@@ -219,7 +219,7 @@
          PAGE HERO / MAIN STATEMENT
     ======================================================= -->
 
-    <section class="dark-grid border-b border-white/15 bg-[#111111] text-white">
+    <section class="border-b border-black/15">
 
       <div
         class="mx-auto max-w-[1600px] px-5 py-16
@@ -229,21 +229,26 @@
 
         <div
           class="mb-8 flex items-center gap-3 text-xs uppercase
-                 tracking-[0.18em] text-[#ff8054]"
+                 tracking-[0.18em] text-accent"
         >
-          <span class="h-px w-8 bg-[#ff8054]"></span>
-          03 / What it could help with
+          <span class="h-px w-8 bg-accent"></span>
+          Step-by-step walkthrough
         </div>
 
 
-        <div class="reveal max-w-5xl">
+        <div class="reveal">
           <h1
-            class="font-display text-4xl leading-[1.05] tracking-[-.025em]
+            class="max-w-5xl font-display text-4xl
+                   leading-[1.08] tracking-[-.025em]
                    sm:text-5xl lg:text-6xl xl:text-7xl"
           >
-            Three reasons to practice before the
-            <span class="italic text-[#ff8054]">real conversation.</span>
+            How InterviewReady
+            <span class="italic text-accent">works.</span>
           </h1>
+
+          <p class="mt-8 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+            Rehearsing for interviews should be systematic, actionable, and repeatable. Here is how students progress from initial practice to polished delivery.
+          </p>
         </div>
 
       </div>
@@ -253,142 +258,173 @@
 
 
     <!-- ======================================================
-         THREE BENEFIT COLUMNS
+         STEPS TIMELINE / GRID
     ======================================================= -->
 
-    <section class="dark-grid bg-[#111111] text-white">
+    <section class="border-b border-black/15 bg-paper">
 
       <div
-        class="mx-auto max-w-[1600px] px-5 py-20
-               sm:px-8 sm:py-28
-               lg:px-12 lg:py-32"
+        class="mx-auto max-w-[1600px] px-5 py-16
+               sm:px-8 sm:py-24
+               lg:px-12 lg:py-28"
       >
 
-        <div class="grid md:grid-cols-3">
+        <div class="grid gap-8 lg:grid-cols-3">
 
-          <!-- Benefit 01 -->
-
+          <!-- Step 1 -->
           <article
-            class="reveal border-b border-white/20 py-12
-                   md:border-b-0 md:border-r md:px-8
-                   md:first:pl-0"
+            class="reveal flex flex-col justify-between border border-black/15 bg-[#fbfaf7] p-8 transition hover:border-black/30 sm:p-10"
           >
+            <div>
+              <div class="flex items-center justify-between">
+                <span
+                  class="flex h-12 w-12 items-center justify-center bg-black text-sm font-bold text-white"
+                >
+                  01
+                </span>
+                <span class="text-xs uppercase tracking-[0.18em] text-accent">
+                  Setup
+                </span>
+              </div>
 
-            <span
-              class="flex h-12 w-12 items-center justify-center
-                     bg-[#3a173d] text-[#f04cff]"
-            >
-              01
-            </span>
+              <h2 class="mt-8 font-display text-3xl leading-snug">
+                Select Your Role & Focus
+              </h2>
 
+              <p class="mt-5 text-base leading-7 text-muted">
+                Choose your specific domain—such as Software Development, Product Management, or Analytics. Define the interview focus (behavioral, technical explanation, or system design) tailored for final-year placement rounds.
+              </p>
+            </div>
 
-            <p
-              class="mt-10 text-xs uppercase tracking-[.16em]
-                     text-[#ff8054]"
-            >
-              Practice
-            </p>
-
-
-            <h2
-              class="mt-4 font-display text-3xl leading-tight sm:text-4xl"
-            >
-              Rehearse realistic questions.
-            </h2>
-
-
-            <p
-              class="mt-5 max-w-sm text-base leading-7 text-white/55"
-            >
-              Move beyond reading question lists by practicing
-              how you would actually explain an answer in an
-              interview-style setting.
-            </p>
-
+            <div class="mt-10 border-t border-black/10 pt-6 text-xs text-muted">
+              Targeted scenario matching
+            </div>
           </article>
 
 
-
-          <!-- Benefit 02 -->
-
+          <!-- Step 2 -->
           <article
-            class="reveal border-b border-white/20 py-12
-                   md:border-b-0 md:border-r md:px-8"
+            class="reveal flex flex-col justify-between border border-black/15 bg-[#fbfaf7] p-8 transition hover:border-black/30 sm:p-10"
           >
+            <div>
+              <div class="flex items-center justify-between">
+                <span
+                  class="flex h-12 w-12 items-center justify-center bg-accent text-sm font-bold text-white"
+                >
+                  02
+                </span>
+                <span class="text-xs uppercase tracking-[0.18em] text-accent">
+                  Rehearsal
+                </span>
+              </div>
 
-            <span
-              class="flex h-12 w-12 items-center justify-center
-                     bg-[#153b37] text-[#49cbb6]"
-            >
-              02
-            </span>
+              <h2 class="mt-8 font-display text-3xl leading-snug">
+                Converse in Real Time
+              </h2>
 
+              <p class="mt-5 text-base leading-7 text-muted">
+                Engage in a live conversational prompt. The AI interviewer poses dynamic questions and follow-ups. You speak or formulate your thoughts on the spot, replicating the real pressure of live interviews.
+              </p>
+            </div>
 
-            <p
-              class="mt-10 text-xs uppercase tracking-[.16em]
-                     text-[#ff8054]"
-            >
-              Reflect
-            </p>
-
-
-            <h2
-              class="mt-4 font-display text-3xl leading-tight sm:text-4xl"
-            >
-              Notice where answers need work.
-            </h2>
-
-
-            <p
-              class="mt-5 max-w-sm text-base leading-7 text-white/55"
-            >
-              Use proposed feedback to spot areas worth revisiting,
-              such as clarity, structure, technical explanation,
-              or incomplete reasoning.
-            </p>
-
+            <div class="mt-10 border-t border-black/10 pt-6 text-xs text-muted">
+              Live verbal & structured response
+            </div>
           </article>
 
 
-
-          <!-- Benefit 03 -->
-
+          <!-- Step 3 -->
           <article
-            class="reveal py-12 md:px-8 md:last:pr-0"
+            class="reveal flex flex-col justify-between border border-black/15 bg-[#fbfaf7] p-8 transition hover:border-black/30 sm:p-10"
           >
+            <div>
+              <div class="flex items-center justify-between">
+                <span
+                  class="flex h-12 w-12 items-center justify-center bg-[#111111] text-sm font-bold text-white"
+                >
+                  03
+                </span>
+                <span class="text-xs uppercase tracking-[0.18em] text-accent">
+                  Feedback
+                </span>
+              </div>
 
-            <span
-              class="flex h-12 w-12 items-center justify-center
-                     bg-[#40261c] text-[#ff8054]"
-            >
-              03
-            </span>
+              <h2 class="mt-8 font-display text-3xl leading-snug">
+                Review & Re-attempt
+              </h2>
+
+              <p class="mt-5 text-base leading-7 text-muted">
+                Receive instant, objective critique across answer structure, clarity of reasoning, and technical precision. Reconsider weak spots and immediately re-attempt the answer to build muscle memory.
+              </p>
+            </div>
+
+            <div class="mt-10 border-t border-black/10 pt-6 text-xs text-muted">
+              Objective reflection loop
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
 
 
-            <p
-              class="mt-10 text-xs uppercase tracking-[.16em]
-                     text-[#ff8054]"
-            >
-              Repeat
+
+    <!-- ======================================================
+         INTERACTIVE PROCESS CARD (Reference Grid Accent)
+    ======================================================= -->
+
+    <section class="border-b border-black/15">
+
+      <div
+        class="mx-auto grid max-w-[1600px]
+               lg:grid-cols-[1.1fr_.9fr]"
+      >
+
+        <div
+          class="flex flex-col justify-center px-5 py-16
+                  sm:px-8 sm:py-20
+                  lg:px-12 lg:py-24"
+        >
+
+          <div class="reveal max-w-2xl space-y-6">
+            <p class="text-xs uppercase tracking-[0.18em] text-accent">
+              Deliberate Practice
             </p>
 
-
-            <h2
-              class="mt-4 font-display text-3xl leading-tight sm:text-4xl"
-            >
-              Try the answer again.
+            <h2 class="font-display text-3xl leading-tight sm:text-4xl lg:text-5xl">
+              Practice answering questions, not just reading them.
             </h2>
 
+            <p class="text-base leading-7 text-muted sm:text-lg">
+              Most preparation fails because candidates prepare in isolation without conversational friction. InterviewReady transforms passive preparation into proactive rehearsals that simulate the exact cadence of top recruiters.
+            </p>
+          </div>
 
-            <p
-              class="mt-5 max-w-sm text-base leading-7 text-white/55"
-            >
-              Revisit questions after reflection so that improvement
-              comes from repeated practice rather than memorizing a
-              perfect script.
+        </div>
+
+
+        <div
+          class="reference-grid flex items-center justify-center
+                 border-t border-black/15 p-6
+                 sm:p-10
+                 lg:border-l lg:border-t-0 lg:p-14"
+        >
+
+          <div class="reveal w-full max-w-md bg-paper p-8 shadow-[0_18px_50px_rgba(0,0,0,.15)]">
+            <p class="text-xs uppercase tracking-[.18em] text-accent">
+              Core Metric
             </p>
 
-          </article>
+            <h3 class="mt-4 font-display text-2xl sm:text-3xl leading-snug">
+              Clearer structure in under 3 sessions.
+            </h3>
+
+            <p class="mt-4 text-sm leading-relaxed text-muted">
+              By isolating weak explanations immediately after you answer, your delivery becomes sharper before you ever face a hiring manager.
+            </p>
+          </div>
 
         </div>
 
@@ -417,18 +453,18 @@
           </p>
 
           <h2 class="mt-2 font-display text-2xl sm:text-3xl">
-            Interested in Early Access?
+            Explore the Benefits of Practice
           </h2>
         </div>
 
 
         <a
-          href="waitlist.html"
+          href="benefits.html"
           class="group inline-flex items-center gap-8
                  bg-accent px-6 py-4 text-sm font-medium text-white
                  transition hover:bg-black"
         >
-          Waitlist information
+          Explore benefits
 
           <span
             class="transition-transform group-hover:translate-x-1"
@@ -493,7 +529,7 @@
             <div class="mt-5 flex flex-col gap-3 text-white/70">
               <a href="index.html">Home</a>
               <a href="problem.html">Problem</a>
-              <a href="#">Benefits</a>
+              <a href="benefits.html">Benefits</a>
             </div>
           </div>
 
@@ -505,7 +541,7 @@
 
             <div class="mt-5 flex flex-col gap-3 text-white/70">
               <a href="solution.html">Concept</a>
-              <a href="how-it-works.html">How it Works</a>
+              <a href="#">How it Works</a>
               <a href="waitlist.html">Waitlist info</a>
             </div>
           </div>
@@ -537,7 +573,10 @@
         <p>
           © 2026 InterviewReady
         </p>
-        
+
+        <p>
+          First-version concept landing page
+        </p>
       </div>
 
     </div>
