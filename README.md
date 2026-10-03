@@ -1,3 +1,11 @@
+
+
+https://github.com/user-attachments/assets/4def5fb0-7f24-444c-87da-0344018c5d97
+
+
+
+https://github.com/user-attachments/assets/ab1264b3-db75-4795-ab10-d27acfb06827
+
 # InterviewReady
 
 > A first-version concept landing page for a proposed AI-powered interview-practice platform tailored for final-year students.
